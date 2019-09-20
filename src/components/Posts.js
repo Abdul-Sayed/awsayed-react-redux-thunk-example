@@ -25,10 +25,10 @@ class Posts extends Component {
       </div>
     ));
     return (
-      <div>
+      <React.Fragment>
         <h1>Posts</h1>
         {postItems}
-      </div>
+      </React.Fragment>
     );
   }
 }
