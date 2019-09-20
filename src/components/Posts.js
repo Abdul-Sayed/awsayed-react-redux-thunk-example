@@ -5,11 +5,13 @@ import { connect } from 'react-redux';
 import { fetchPosts } from '../actions/postActions';
 
 class Posts extends Component {
-  componentWillMount() {
+  componentDidMount() {
     this.props.fetchPosts();
   }
 
-  componentWillReceiveProps(nextProps) {
+  componentDidUpdate(nextProps) {
+    // nextProps.newPost && this.props.posts.unshift(nextProps.newPost);
+
     if (nextProps.newPost) {
       this.props.posts.unshift(nextProps.newPost);
     }
